@@ -1,4 +1,4 @@
-from mmseg.apis import inference_model, init_model, show_result_pyplot,inference_segmentor
+from mmseg.apis import inference_model, init_model, show_result_pyplot
 import mmcv
 
 config_file = 'pspnet_r50-d8_4xb2-40k_cityscapes-512x1024.py'
@@ -18,5 +18,5 @@ show_result_pyplot(model, img, result, show=True, out_file='result.jpg', opacity
 # test a video and show the results
 video = mmcv.VideoReader('video.mp4')
 for frame in video:
-   result = inference_segmentor(model, frame)
+   result = inference_model(model, frame)
    show_result_pyplot(model, result, wait_time=1)
