@@ -1,4 +1,4 @@
-from mmseg.apis import inference_model, init_model, show_result_pyplot
+from mmseg.apis import inference_model, init_model, show_result_pyplot,inference_segmentor
 import mmcv
 
 config_file = 'pspnet_r50-d8_4xb2-40k_cityscapes-512x1024.py'
